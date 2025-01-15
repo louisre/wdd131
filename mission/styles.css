@@ -3,9 +3,13 @@ body{
     font-size: 20px;
     justify-items: center;
     border: 1px solid gray;
-    padding: 20px;
-    margin: 20px;
+    padding: 45px;
+    margin: 20px auto;
     width: 600px;
+}
+
+header{
+    padding-bottom: 5px;
 }
 
 h1{
@@ -15,8 +19,13 @@ h1{
 h2{
     font-size: 20px;
     color: #006EB6;
+    border-bottom: 1px solid gray
 }
 
-.list{
+.listing{
     font-style: italic;
+}
+
+footer{
+    padding-top: 25px;
 }
