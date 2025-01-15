@@ -1,11 +1,14 @@
 body{
     font-family:'Times New Roman', Times, serif;
     font-size: 20px;
-    justify-items: center;
     border: 1px solid gray;
     padding: 45px;
     margin: 20px auto;
     width: 600px;
+}
+
+.content{
+    justify-items: center;
 }
 
 header{
