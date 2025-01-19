@@ -32,3 +32,13 @@ h2{
 footer{
     padding-top: 25px;
 }
+
+/* Dark theme styles */
+body.dark {
+    background-color: #333;
+    color: white;
+}
+
+body.dark footer img {
+    content: url('images/byui-logo_white.jpg');
+}
