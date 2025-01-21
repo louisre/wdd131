@@ -1,14 +1,15 @@
 body{
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
     border: 1px solid gray;
     padding: 45px;
     margin: 20px auto;
     width: 600px;
+    line-height: 1.5;
 }
 
 .content{
-    justify-items: center;
+    text-align: center;
 }
 
 header{
@@ -22,12 +23,22 @@ h1{
 h2{
     font-size: 20px;
     color: #006EB6;
-    border-bottom: 1px solid gray
+    border-bottom: 1px solid gray;
+    font-weight: 100;
+}
+
+main{
+    text-align: left;
 }
 
 .listing{
     font-style: italic;
 }
+
+ol {
+    margin-left: 40px;
+}
+
 
 footer{
     padding-top: 25px;
