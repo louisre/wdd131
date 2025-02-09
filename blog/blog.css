@@ -12,101 +12,154 @@ body{
     padding: 0;
     background-color: #f5f5f5;
     color: var(--dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1{
+    color: var(--dark);
+    font-size: 2.5rem;
+    text-align: center; /* Ensure the title is centered */
+    margin: 0;
+    padding-bottom: 1rem; /* Add space between title and nav */
+    border-bottom: 0.2rem solid var(--gold); /* Add gold bottom border to title */
+}
+
+h2{
+    color: var(--red);
+    font-size: 1.75rem;
 }
 
 h1, h2{
     font-family: Lora, Impact, serif;
-    color: var(--red);
 }
 
 header{
     background-color: #f5f5f5;
-    padding: 20px;
+    padding: 1.25rem;
     text-align: center;
-    color: white;
+    border-bottom: 0.2rem solid var(--gold); /* Bottom border for header */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the header content */
 }
 
 header nav{
-    margin-top: 10px;
-    border: 0.2rem solid var(--gold);
+    width: 100%; /* Make the nav take full width */
+    text-align: right; /* Align nav content to the right */
+    padding-top: 1rem; /* Space between title and nav */
 }
 
 header .main-nav{
     list-style: none;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    justify-content: end;
-}
-
-header .main-nav li{
-    margin-left: 20px;
+    display: flex;
+    justify-content: flex-end; /* Move nav items to the right */
+    gap: 2rem;
 }
 
 header .main-nav a{
     color: var(--red);
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1.25rem;
 }
 
 header .main-nav a:hover{
     text-decoration: underline;
 }
 
-.articles{
+/* Main Layout */
+.content-layout {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    padding: 20px;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    flex-grow: 1;
 }
 
-.book-review{
-    background-color: white;
-    padding: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: 0.2rem solid var(--gold);
-}
-
-.book-details{
+/* Left Section - Articles */
+.articles {
     display: flex;
-    gap: 20px;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
-.book-info{
-    flex: 1;
+/* Book Review Layout */
+.book-review{
+    display: grid;
+    grid-template-columns: 1fr 4px 2fr;
+    gap: 1rem;
+    align-items: center;
 }
 
-.book-description{
-    color: var(--dark);
-    margin-bottom: 10px;
+/* Left Side - Book Metadata (Aligned to right) */
+.book-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-end;
+    text-align: right;
+    padding-right: 1rem;
 }
 
-.book-ages, .book-genre, .book-stars{
-    font-weight: bold;
-    color: var(--dark);
+/* Vertical Separator Line */
+.separator {
+    width: 4px;
+    height: 100%;
+    background-color: var(--gold);
 }
 
-.book-stars{
-    color: var(--gold);
+/* Center Section - Book Details */
+.book-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
 }
 
+/* Ensure book images do not overflow */
+.book-details img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Right Section - Filters */
+.filters {
+    background-color: white;
+    padding: 1.5rem;
+    border: 0.2rem solid var(--gold); /* Matching border thickness */
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    text-align: left;
+    height: 100%;
+    position: sticky;
+    top: 1.5rem;
+    padding-left: 2rem;  /* Add more padding to the left */
+    padding-right: 2rem; /* Add more padding to the right */
+}
+
+/* Filters Title */
+.filters h2 {
+    font-size: 0.875rem;
+    margin: 0;
+    color: var(--dark); /* Dark color for the text */
+}
+
+/* Skip to Content */
 .skiptocontent a{
     position: absolute;
-    top: -40px;
+    top: -2.5rem;
     left: 0;
     background-color: var(--red);
     color: white;
-    padding: 10px;
+    padding: 0.625rem;
     text-decoration: none;
-}
-
-.skiptocontent a:focus{
-    top: 0;
 }
 
 footer{
     text-align: center;
-    padding: 20px;
+    padding: 1.25rem;
     background-color: var(--dark);
     color: white;
+    z-index: 1;
 }
